@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans' , sans-serif;
+    color: hsl(0, 11%, 12%);
+    font-size: 18px;
+}
+
+.main {
+    background-position:left;
+    background-color: hsl(185, 75%, 39%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.circles .c1, .circles .c2 {
+  position:absolute;
+  height: 100%;
+  width: 900px;
+  z-index: 0;
+  opacity: 0;
+  animation: 2s enter forwards;
+}
+
+.c1 {
+    top:-34%;
+    left:-15%;
+    transform: translate(-100px, -100px);
+}
+
+.c2 {
+    bottom: -34%;
+    right: -15%;
+    transform: translate(100px, 100px);
+    overflow: hidden;
+}
+
+@keyframes enter{ 
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+    
+}
+
+.container {
+    background: #fff;
+    text-align: center;
+    max-width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    animation: 2s containeranime forwards;
+    opacity: 0;
+    transform : translateY(50px);
+}
+
+@keyframes containeranime{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.upper-container {
+    height: 150px;
+    width: 350px;
+    background-image: url('../images/bg-pattern-card.svg');
+    background-size: cover;
+}
+
+.image-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: -50px auto -30px auto;
+    border: 5px solid white;
+}
+
+.image-container img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.card-body {
+    margin-top: 50px;
+    margin-bottom: -75px;
+    height: 250px;
+    line-height: 1.7rem;
+}
+
+.card-body .info {
+    font-size: 1.4rem;
+}
+
+.card-body .age, .card-body .city{
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: hsl(0,0%,59%);
+}
+.card-body .city {
+    margin-top: 10px;
+}
+
+.info .meta {
+    display: block;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: hsl(0,0%,59%);
+    letter-spacing: 1px;
+}
+.info {
+    padding: 22px 42px 0 42px ;
+    margin-top: 22px;
+    border-top: 1px solid hsl(0,10%,88%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.footer {
+    background-color: hsl(185, 75%, 39%);
+    color: white;
+    text-align: center;
+}
